@@ -79,19 +79,19 @@ public class Sudoku3 {
 
     public int[][] generarSudoku() {
 
-        int[][] sudok = new int[9][9];
-        for (int i = 0; i < sudok.length; i++) {
-            for (int j = 0; j < sudok[1].length; j++) {
+        int[][] sudoku = new int[9][9];
+        for (int i = 0; i < sudoku.length; i++) {
+            for (int j = 0; j < sudoku[1].length; j++) {
                 int ale = (int) (Math.random() * 10);
                 if (ale == 5) {
-                    sudok[i][j] = (int) (Math.random() * 9) + 1;
+                    sudoku[i][j] = (int) (Math.random() * 9) + 1;
                 } else {
-                    sudok[i][j] = 0;
+                    sudoku[i][j] = 0;
                 }
             }
 
         }
-        return sudok;
+        return sudoku;
     }
 
     public static void main(String[] args) {
@@ -104,7 +104,5 @@ public class Sudoku3 {
         if (!miSudoku.resolver(sudoku)) {
             System.out.println("El Sudoku notiene solución");
         }
-
-
     }
 }
